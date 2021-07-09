@@ -72,12 +72,16 @@ const SignupForm = () => {
         id="email"
         name="email"
         type="email"
+        /* above will show HTML validation */
+
         onChange={formik.handleChange}
         onBlur={formik.handleBlur}
         value={formik.values.email}
       />
       {formik.touched.email && formik.errors.email ? (
-        <div><blink>{formik.errors.email}</blink></div>
+        <div>
+          <blink>{formik.errors.email}</blink>
+        </div>
       ) : null}
 
       <button type="submit">Submit</button>
